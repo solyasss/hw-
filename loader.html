@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .loading {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .heart {
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 160px;
+            border-radius: 50px 50px 0 0;
+            background-color: rgb(232, 100, 122);
+        }
+
+        .heart.left {
+            left: 0;
+            transform: rotate(-45deg);
+        }
+
+        .heart.right {
+            left: 100px;
+            transform: rotate(45deg);
+        }
+
+        @keyframes heart {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.8);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading-container">
+        <div class="loading">
+            <div class="heart left"></div>
+            <div class="heart right"></div>
+        </div>
+    </div>
+</body>
+
+</html>
